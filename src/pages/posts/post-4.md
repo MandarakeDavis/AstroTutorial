@@ -1,6 +1,6 @@
 ---
 layout: ../../layout/markdownpostlayout.astro
-title: My Third Blog Post
+title: My Fourth Blog Post
 author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image: 
@@ -9,4 +9,4 @@ image:
 pubDate: 2022-07-15
 tags: ["astro", "learning in public", "setbacks", "community"]
 ---
-It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
+This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.

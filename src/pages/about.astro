@@ -8,9 +8,9 @@ const identity = {
   hobbies: ["Photography", "Gaming", "Sleepimg"],
 };
 
-import '../asset/css/global.css';
-import Navigation from '../components/header.astro';
+import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
+import '../asset/css/global.css';
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
@@ -38,7 +38,7 @@ const skillColor = "navy";
 
   </head>
   <body>
-		<Navigation />
+		<Header />
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
@@ -69,5 +69,8 @@ const skillColor = "navy";
     {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
 		<Footer />
+    <script>
+      import "../script/menu.js";
+    </script>
   </body>
 </html>
