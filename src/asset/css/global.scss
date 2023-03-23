@@ -1,3 +1,15 @@
+@mixin mq-sp {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin mq-pc {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -18,4 +30,57 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+}
+
+
+footer{
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+  }
+}
+
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+  a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover{
+      background-color: #ff9776;
+    }
+    &:focus{
+      background-color: #ff9776;
+    }
+  }
+}
+
+.expanded {
+  display: unset;
+}
+
+@include mq-sp{
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+    a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  }
 }
