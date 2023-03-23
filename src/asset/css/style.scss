@@ -1,0 +1,26 @@
+@mixin mq-sp {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin mq-pc {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+.global_foot{
+  @include mq-pc{
+    height: 284px;
+  }
+}
+
+h1 {
+  color: purple;
+  font-size: 4rem;
+}
+.skill {
+  color: var(--skillColor);
+  font-weight: bold;
+}

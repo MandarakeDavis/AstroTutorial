@@ -8,23 +8,37 @@ const identity = {
   hobbies: ["Photography", "Gaming", "Sleepimg"],
 };
 
+import '../asset/css/global.css';
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
 const happy = true;
 const finished = false;
 const goal = 3;
-
+const skillColor = "navy";
 ---
 <html lang="en">
   <head>
     <meta charset ="utf-8" />
     <meta name="viewport" content="width=device-width" />
-     <h1>{pageTitle}</h1>
+     <title>{pageTitle}</title> 
+
+     <style define:vars={{skillColor}}> 
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+      }
+    </style>
+
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+		<Navigation />
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
@@ -44,7 +58,7 @@ const goal = 3;
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
 
 

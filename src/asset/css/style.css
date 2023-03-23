@@ -1,0 +1,15 @@
+@media only screen and (min-width: 768px) {
+  .global_foot {
+    height: 284px;
+  }
+}
+
+h1 {
+  color: purple;
+  font-size: 4rem;
+}
+
+.skill {
+  color: var(--skillColor);
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
